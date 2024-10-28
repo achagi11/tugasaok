@@ -3,30 +3,27 @@
 //            3.Adile Ikhsan Muhammad Al Masyhuri (24104410071)
 //            4.Dimas Akbar Maulana (24104410059)
 //            5.Premas Aji Susilo (24104410055)
-                         
 
-#include <iostream>
-
+#include<iostream>
+#include<string>
+#include<algorithm>
 using namespace std;
+int main()
 
-int main(){
-    string kata, katabalik;
+{
+    string a;
+    cout << "Check Kata\n";
+    cout << "Input Kata: ";
+    getline(cin, a);
 
-    cout << "check kata" << "\n";
-    cout << "input kata : ";
-    cin >> kata;
+    string b = a;
+    reverse(b.begin(),b.end());
 
-    for (int i = kata.length()-1; i >= 0; i--)
-    {
-        katabalik += kata[i];
+    if (a==b) {
+        cout << "Hasil : True\n";
+    } else {
+        cout << "Hasil : False\n";
     }
-    if (kata == katabalik){
-        cout << "hasil : true\n" << kata << "\n" << katabalik;
-        cout << "\nkata : " << kata << " kata palindrom";
-    }
-    else {
-        cout << "hasil : false\n" << kata << "\n" << katabalik;
-        cout << "\nkata : " << kata << " bukan kata palindrom";
-    }
+    cout << a << "\n" << b;
     return 0;
 }
